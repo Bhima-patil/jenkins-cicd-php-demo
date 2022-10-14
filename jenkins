@@ -2,10 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage("Git checkout") {
             steps {
-                sshPublisher(publishers: [sshPublisherDesc(configName: 'php', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/var/www/html/', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/*.php')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                git branch: 'main', url: 'https://github.com/Bhima-patil/jenkins-cicd-php-demo'
             }
         }
     }
 }
+
