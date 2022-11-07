@@ -3,6 +3,6 @@
   <title>Index</title>
  </head>
  <body>
- <?php echo '<p>Hello bhim aa!!</p>'; ?> 
+ <?php echo '<p>Hello bhimaa!!</p>'; ?> 
  </body>
 </html>
